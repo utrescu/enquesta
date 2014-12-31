@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="Pilaf" id="0" name="UsuariIntegrationSpec" package="net.xaviersala" tests="6" time="0.585" timestamp="2014-12-31T16:25:13">
+      <properties />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Desar el primer usuari a la base de dades" time="0.447" />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Fer canvis en un usuari existent" time="0.011" />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Esborrar un usuari fa que desaparegui de la base de dades" time="0.045" />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Desar un usuari que no compleix les condicions genera un error" time="0.049" />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Usuari amb errors pot modificar les propietats" time="0.013" />
+
+      <testcase classname="net.xaviersala.UsuariIntegrationSpec" name="Usuari pot crear enquestes" time="0.016" />
+
+      <system-out><![CDATA[--Output from Desar el primer usuari a la base de dades--
+--Output from Fer canvis en un usuari existent--
+--Output from Esborrar un usuari fa que desaparegui de la base de dades--
+--Output from Desar un usuari que no compleix les condicions genera un error--
+--Output from Usuari amb errors pot modificar les propietats--
+--Output from Usuari pot crear enquestes--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from Desar el primer usuari a la base de dades--
+--Output from Fer canvis en un usuari existent--
+--Output from Esborrar un usuari fa que desaparegui de la base de dades--
+--Output from Desar un usuari que no compleix les condicions genera un error--
+--Output from Usuari amb errors pot modificar les propietats--
+--Output from Usuari pot crear enquestes--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

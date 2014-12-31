@@ -1,0 +1,25 @@
+Testsuite: net.xaviersala.UsuariIntegrationSpec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0,585 sec
+------------- Standard Output ---------------
+--Output from Desar el primer usuari a la base de dades--
+--Output from Fer canvis en un usuari existent--
+--Output from Esborrar un usuari fa que desaparegui de la base de dades--
+--Output from Desar un usuari que no compleix les condicions genera un error--
+--Output from Usuari amb errors pot modificar les propietats--
+--Output from Usuari pot crear enquestes--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from Desar el primer usuari a la base de dades--
+--Output from Fer canvis en un usuari existent--
+--Output from Esborrar un usuari fa que desaparegui de la base de dades--
+--Output from Desar un usuari que no compleix les condicions genera un error--
+--Output from Usuari amb errors pot modificar les propietats--
+--Output from Usuari pot crear enquestes--
+------------- ---------------- ---------------
+
+Testcase: Desar el primer usuari a la base de dades took 0,447 sec
+Testcase: Fer canvis en un usuari existent took 0,011 sec
+Testcase: Esborrar un usuari fa que desaparegui de la base de dades took 0,045 sec
+Testcase: Desar un usuari que no compleix les condicions genera un error took 0,049 sec
+Testcase: Usuari amb errors pot modificar les propietats took 0,013 sec
+Testcase: Usuari pot crear enquestes took 0,016 sec
