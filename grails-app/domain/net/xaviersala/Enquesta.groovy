@@ -12,6 +12,10 @@ class Enquesta {
 	static hasMany = [ opcions : Opcio ]
 	
     static constraints = {
+		nomEnquesta blank: true
 		pregunta blank: false
+		imatge()
+		usuari()
+		opcions()
     }
 }
