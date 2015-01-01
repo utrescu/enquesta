@@ -1,2 +1,5 @@
-target/*
-target-eclipse/*
+/target/
+/target-eclipse/
+*~
+.gradle/
+

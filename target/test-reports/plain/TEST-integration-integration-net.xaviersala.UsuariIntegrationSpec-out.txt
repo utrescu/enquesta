@@ -1,6 +1,0 @@
---Output from Desar el primer usuari a la base de dades--
---Output from Fer canvis en un usuari existent--
---Output from Esborrar un usuari fa que desaparegui de la base de dades--
---Output from Desar un usuari que no compleix les condicions genera un error--
---Output from Usuari amb errors pot modificar les propietats--
---Output from Usuari pot crear enquestes--
