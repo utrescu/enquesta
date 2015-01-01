@@ -9,5 +9,13 @@ class Opcio {
     	text nullable: false, blank: false
 		}
 	
+	static mapping = {		
+		vots defaultValue: "0"
+	 }
+	
 	static belongsTo = [enquesta: Enquesta]
+	
+	String toString() {
+		"$text"
+	}
 }

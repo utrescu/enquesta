@@ -13,5 +13,22 @@ class EnquestaController {
 				 totalPreguntes: Enquesta.count() ]
 	}
 
+	def llista() {
+		def usuari = Usuari.findByUserId(params.id)
+		if (!usuari) {
+			response.sendError(404)
+		} else {
+			[ usuari : usuari ]
+		}
+	}
+	
+	// Crear una nova enquesta
+	def nova() {
+		
+	}
+	
+	def afegirEnquesta() {
+		flash.message = "Successfully created Post"
+	}
 
 }

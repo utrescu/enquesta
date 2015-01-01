@@ -594,3 +594,47 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+#horitzontal li {
+	display: inline;
+	list-style-type: none;
+	padding-left: 30px;	
+}
+
+div#barra {
+	background-color: lightgray;
+	width: 100%;
+}
+
+div#detalls-usuari {
+	float: left;
+	
+}
+
+div#dreta {
+	width: 24%;
+	float: right;
+	
+}
+
+div.EntradaNomEnquesta {
+	display: inline-block;
+	width: 200px;
+}
+
+div.EntradaPreguntaEnquesta {
+	display: inline;
+}
+
+div.EntradaEnquesta {
+	display: block;
+	padding-left: 30px;
+}
+
+div#resultat {
+	padding-top: 30px;
+}
+
+li.tipus { 
+	font-weight: bold;
+}
