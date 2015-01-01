@@ -1,7 +1,7 @@
 package net.xaviersala
 
-class UsuariController {
+class OpcioController {
 
 	static scaffold = true
-	def index() { }
+    
 }
