@@ -10,7 +10,7 @@ class Enquesta {
 	Date dateCreated
 	
 	static belongsTo = [usuari: Usuari]
-	static hasMany = [ opcions : Opcio, registres: Registre ]
+	static hasMany = [opcions: Opcio, registres: Registre ]
 	
     static constraints = {
 		nomEnquesta blank: true

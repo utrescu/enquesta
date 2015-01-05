@@ -22,8 +22,10 @@
 		<div id="resultat">
 			<g:each in="${usuari.enquestes}" var="enquesta">
 				<div class="EntradaEnquesta">
-					<div class="EntradaNomEnquesta">${enquesta.nomEnquesta}</div>
-					<div class="EntradaPreguntaEnquesta">${enquesta.pregunta}</div>
+					<div class="EntradaNomEnquesta">
+					  <g:link action="vota" id="${enquesta.id}">${enquesta.nomEnquesta}</g:link></div>
+					<div class="EntradaPreguntaEnquesta">
+					<g:link action="vota" id="${enquesta.id}">${enquesta.pregunta}</g:link></div>
 				</div>
 			</g:each>
 		</div>

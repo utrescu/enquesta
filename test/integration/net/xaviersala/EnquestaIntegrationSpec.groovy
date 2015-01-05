@@ -15,6 +15,23 @@ class EnquestaIntegrationSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-    }
+	def "Comprovar que l'enquesta pot tenir opcions"() {
+	given: "Donat un usuari amb una enquesta"
+	Usuari nou = new Usuari( userId:"xavier", contrasenya:"secret")
+	nou.addToEnquestes(new Enquesta(pregunta: "Quin color prefereixes?"))
+	nou.enquestes[0].addToOpcions(new Opcio(text:"blau"))
+	nou.enquestes[0].addToOpcions(new Opcio(text:"vermell"))
+	
+	
+	when: "es desa l'usuari"
+	nou.save()
+	
+	then: "Hi ha dues opcions en l'enquesta"
+	nou.errors.errorCount == 0
+	nou.id != null
+	Usuari.get(nou.id).enquestes[0].opcions.size() == 2
+
+	
+	
+	}
 }

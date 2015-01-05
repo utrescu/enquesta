@@ -43,9 +43,26 @@ class EnquestaControllerSpec extends Specification {
 		controller.llista()
 		
 		then: "rep un error 404"
-		response.status == 404
-		
-		
+		response.status == 404				
 	}
+	
+	def "Comprova que els vots es desen"() {
+		given: "Una enquesta en la base de dades"
+		Usuari nou = new Usuari( userId:"xavier", contrasenya:"secret")
+		nou.addToEnquestes(new Enquesta(pregunta: "Quin color prefereixes?"))
+		nou.enquestes.first().addToOpcions(new Opcio(text:"blau"))
+		nou.enquestes[0].addToOpcions(new Opcio(text:"vermell"))
+		nou.save(failOnError:true)
+		
+		when: "Al votar una opció"
+		params.vots = nou.enquestes[0].opcions[0].id
+		def model = controller.vota()
+		
+		then: "La opció té un vot"		
+		model.usuari.userId == "xavier"
+		model.enquestes[0].opcions.getAt(0) == 1
+	}
+	
+
 	
 }

@@ -27,8 +27,28 @@ class EnquestaController {
 		
 	}
 	
-	def afegirEnquesta() {
+	def afegir() {
 		flash.message = "Successfully created Post"
+	}
+	
+	def vota() {
+		def enquesta = Enquesta.get(params.id)
+		if (!enquesta) {
+			response.sendError(404)
+		} else {
+			[ enquesta : enquesta ]
+		}
+	}
+	
+	def gracies() {
+		def vot = Opcio.get(params.vots)
+		if (!vot) {
+			response.sendError(404)
+		} else {
+			vot.vots = vot.vots + 1
+			vot.save()
+			render("OK")
+		}	
 	}
 
 }

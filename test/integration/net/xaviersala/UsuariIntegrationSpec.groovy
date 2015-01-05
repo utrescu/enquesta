@@ -45,7 +45,7 @@ class UsuariIntegrationSpec extends Specification {
         def foundUser = Usuari.get(user.id)
         foundUser.delete(flush: true)
 
-        then: "Ja no hi és a la base de dades"
+        then: "Ja no hi Ã©s a la base de dades"
         !Usuari.exists(foundUser.id)
 
     }
@@ -80,7 +80,7 @@ class UsuariIntegrationSpec extends Specification {
         chuck.contrasenya = "fistfist"
         chuck.validate()
 
-        then: "Es pot desar perquè valida"
+        then: "Es pot desar perquÃ¨ valida"
         !chuck.hasErrors()
         chuck.save()
     
@@ -91,9 +91,9 @@ class UsuariIntegrationSpec extends Specification {
 		def joe = new Usuari(userId: 'joe', contrasenya:'secret').save()
 		
 		when: "Crea una enquesta"
-		joe.addToEnquestes(new Enquesta(pregunta:"Quin color t'agrada més"))		
+		joe.addToEnquestes(new Enquesta(pregunta:"Quin color t'agrada mÃ©s"))		
 		
-		then: "L'usuari té l'enquesta a la base de dades"
+		then: "L'usuari tÃ© l'enquesta a la base de dades"
 		1 == joe.enquestes.size()
 	}
 
