@@ -2,11 +2,11 @@ package net.xaviersala
 
 class Opcio {
 
-	String text
+	String textOpcio
 	Long vots = 0
 	
     static constraints = {
-    	text nullable: false, blank: false
+    	textOpcio nullable: false, blank: false
 		vots min:0L
 		}
 	
@@ -15,10 +15,10 @@ class Opcio {
 		sort "text"		
 	 }
 	
-	static belongsTo = [enquesta: Enquesta]
+	static belongsTo = [ enquesta: Enquesta ]
 	
 	String toString() {
-		"$text" + vots
+		"$textOpcio" + " : " + vots
 	}
 	
 	 

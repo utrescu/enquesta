@@ -6,10 +6,10 @@
 <body>
 	<formset> 
 		<legend>Cerca enquestes</legend>
-		<g:form action="results">
+		<g:form action="resultats">
 			<label for="pregunta">Enquesta</label>
 			<g:textField name="pregunta" />
-			<g:submitButton name="search" value="Search" />
+			<g:submitButton name="cerca" value="cerca" />
 		</g:form>
 	</formset>
 </body>

@@ -2,11 +2,12 @@ package net.xaviersala
 
 class EnquestaController {
 
+	def opcionsService
     
 	static scaffold = true
-	def search() {}
+	def cerca() {}
 
-	def results(String pregunta) {
+	def resultats(String pregunta) {
 		def preguntes = Enquesta.where { pregunta =~ "%${pregunta}%" }.list()
 		return [ preguntes: preguntes,
 				 term: params.pregunta,
@@ -45,9 +46,11 @@ class EnquestaController {
 		if (!vot) {
 			response.sendError(404)
 		} else {
-			vot.vots = vot.vots + 1
-			vot.save()
-			render("OK")
+		// És millor fer les transaccions en un "service" perquè si no a
+		// vegades no desa inmediatament i el que es fa en un service és
+		// si tot acaba bé, una transacció.
+			opcionsService.incrementaVots(vot)			
+			[enquesta: vot.enquesta]
 		}	
 	}
 

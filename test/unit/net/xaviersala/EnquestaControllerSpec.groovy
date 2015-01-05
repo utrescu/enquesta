@@ -8,7 +8,7 @@ import spock.lang.Specification
  * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
 @TestFor(EnquestaController)
-@Mock([Usuari,Enquesta])
+@Mock([Usuari,Enquesta, Opcio])
 class EnquestaControllerSpec extends Specification {
 
     def setup() {
@@ -50,13 +50,13 @@ class EnquestaControllerSpec extends Specification {
 		given: "Una enquesta en la base de dades"
 		Usuari nou = new Usuari( userId:"xavier", contrasenya:"secret")
 		nou.addToEnquestes(new Enquesta(pregunta: "Quin color prefereixes?"))
-		nou.enquestes.first().addToOpcions(new Opcio(text:"blau"))
-		nou.enquestes[0].addToOpcions(new Opcio(text:"vermell"))
+		nou.enquestes[0].addToOpcions(new Opcio(textOpcio:"blau"))
+		nou.enquestes[0].addToOpcions(new Opcio(textOpcio:"vermell"))
 		nou.save(failOnError:true)
 		
 		when: "Al votar una opció"
 		params.vots = nou.enquestes[0].opcions[0].id
-		def model = controller.vota()
+		def model = controller.gracies()
 		
 		then: "La opció té un vot"		
 		model.usuari.userId == "xavier"

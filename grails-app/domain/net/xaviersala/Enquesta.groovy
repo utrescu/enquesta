@@ -9,8 +9,8 @@ class Enquesta {
 	byte[] imatge
 	Date dateCreated
 	
-	static belongsTo = [usuari: Usuari]
-	static hasMany = [opcions: Opcio, registres: Registre ]
+	static belongsTo = [ usuari: Usuari ]
+	static hasMany = [ opcions: Opcio, registres: Registre ]
 	
     static constraints = {
 		nomEnquesta blank: true

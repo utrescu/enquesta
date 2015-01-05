@@ -11,7 +11,7 @@
   <div>
     <g:form action="gracies">
   	    <g:each in="${enquesta.opcions}" var="opcio">
-  	    	<g:radio name="vots" value="${opcio.id}"/> ${opcio.text}<br/>  		    
+  	    	<g:radio name="vots" value="${opcio.id}"/> ${opcio.textOpcio}<br/>  		    
   	    </g:each>
   	    <g:actionSubmit value="Vota!" action="gracies" />
     </g:form>

@@ -19,8 +19,8 @@ class EnquestaIntegrationSpec extends Specification {
 	given: "Donat un usuari amb una enquesta"
 	Usuari nou = new Usuari( userId:"xavier", contrasenya:"secret")
 	nou.addToEnquestes(new Enquesta(pregunta: "Quin color prefereixes?"))
-	nou.enquestes[0].addToOpcions(new Opcio(text:"blau"))
-	nou.enquestes[0].addToOpcions(new Opcio(text:"vermell"))
+	nou.enquestes[0].addToOpcions(new Opcio(textOpcio:"blau"))
+	nou.enquestes[0].addToOpcions(new Opcio(textOpcio:"vermell"))
 	
 	
 	when: "es desa l'usuari"

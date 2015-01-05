@@ -15,6 +15,6 @@
     <li><g:link controller="enquesta" action="show" id="${pregunta.id}">${pregunta.pregunta}</g:link></li>
     </g:each>
   </ul>
-  <g:link action='search'>Torna a cercar</g:link>
+  <g:link action='cerca'>Torna a cercar</g:link>
 </body>
 </html>
